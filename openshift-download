@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+if [ $# -ne 1 ]
+then
+echo "Usage: `basename $0` OPENSHIFT_VERSION"
+exit
+fi
+
+openshift_version_parts=($(echo "${1}" | tr "." "\n"))
+if [ ${#openshift_version_parts[@]} -eq 2 ]
+then
+wget http://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-${1}/openshift-install-linux.tar.gz
+wget http://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-${1}/openshift-client-linux.tar.gz
+else
+wget http://mirror.openshift.com/pub/openshift-v4/clients/ocp/${1}/openshift-install-linux.tar.gz
+wget http://mirror.openshift.com/pub/openshift-v4/clients/ocp/${1}/openshift-client-linux.tar.gz
+fi
+
+tar xvf openshift-install-linux.tar.gz openshift-install
+tar xvf openshift-client-linux.tar.gz oc kubectl
+rm -i -f openshift-install-linux.tar.gz
+rm -i -f openshift-client-linux.tar.gz
+~
