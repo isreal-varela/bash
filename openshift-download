@@ -12,13 +12,25 @@ if [ ${#openshift_version_parts[@]} -eq 2 ]
 then
 wget http://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-${1}/openshift-install-linux.tar.gz
 wget http://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-${1}/openshift-client-linux.tar.gz
+wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-${1}/oc-mirror.tar.gz
 else
 wget http://mirror.openshift.com/pub/openshift-v4/clients/ocp/${1}/openshift-install-linux.tar.gz
 wget http://mirror.openshift.com/pub/openshift-v4/clients/ocp/${1}/openshift-client-linux.tar.gz
+wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${1}/oc-mirror.tar.gz
 fi
+
+wget https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/mirror-registry/latest/mirror-registry.tar.gz
+wget https://mirror.openshift.com/pub/openshift-v4/clients/pipelines/latest/tkn-linux-amd64.tar.gz
+wget https://mirror.openshift.com/pub/openshift-v4/clients/pipelines/latest/tkn-windows-amd64.zip
+wget https://mirror.openshift.com/pub/rhacs/assets/latest/bin/linux/roxctl
+wget https://mirror.openshift.com/pub/openshift-v4/clients/butane/latest/butane-amd64
+wget https://mirror.openshift.com/pub/openshift-v4/amd64/dependencies/rhcos/latest/rhcos-vmware.x86_64.ova
+wget https://install.stackrox.io/scanner/scanner-vuln-updates.zip
+wget https://install.stackrox.io/collector/support-packages/x86_64/2.7.0/support-pkg-2.7.0-latest.zip
 
 tar xvf openshift-install-linux.tar.gz openshift-install
 tar xvf openshift-client-linux.tar.gz oc kubectl
 rm -i -f openshift-install-linux.tar.gz
 rm -i -f openshift-client-linux.tar.gz
-~
+
+oc-mirror --config=../imageset-config.yaml file://
