@@ -12,6 +12,9 @@ mirror:
 #  operators:
 #  - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.15
 #    packages:
+#     - name: advanced-cluster-management
+#       channels:
+#       - name: release-2.9
 #    - name: cincinnati-operator
 #      channels:
 #      - name: v1 
@@ -27,9 +30,6 @@ mirror:
 #    - name: devworkspace-operator
 #      channels:
 #      - name: fast
-#    - name: elasticsearch-operator                                    
-#      channels:
-#      - name: stable-5.8 
 #    - name: file-integrity-operator                                   
 #      channels:
 #      - name: stable 
@@ -39,9 +39,27 @@ mirror:
 #    - name: kiali-ossm 
 #      channels:
 #      - name: stable 
+#     - name: local-storage-operator
+#       channels:
+#       - name: stable
 #    - name: loki-operator 
 #      channels:
 #      - name: stable-5.8 
+#    - name: mcg-operator 
+#      channels:
+#      - name: stable-4.15
+#    - name: ocs-client-operator
+#      channels: 
+#      - name: stable-4.14
+#    - name: ocs-operator
+#      channels:
+#      - name: stable-4.14
+#    - name: odf-csi-addons-operator 
+#      channels:
+#      - name: stable-4.14
+#    - name: odf-operator 
+#      channels:
+#      - name: stable-4.14
 #    - name: openshift-gitops-operator 
 #      channels:
 #      - name: latest
@@ -57,24 +75,9 @@ mirror:
 #    - name: servicemeshoperator
 #      channels:
 #      - name: stable 
-#    - name: ocs-client-operator
-#      channels: 
-#      - name: stable-4.14
-#    - name: ocs-operator
-#      channels:
-#      - name: stable-4.14
-#    - name: odf-operator 
-#      channels:
-#      - name: stable-4.14
-#    - name: odf-csi-addons-operator 
-#      channels:
-#      - name: stable-4.14
-#    - name: mcg-operator 
-#      channels:
-#      - name: stable-4.14
-#    - name: local-storage-operator 
-#      channels:
-#      - name: stable
+
+
+
 #  additionalImages:
 #  - name: registry.redhat.io/ubi8/ubi:latest
 #  - name: registry.redhat.io/ubi8/nodejs-18:latest
