@@ -30,7 +30,17 @@ wget https://install.stackrox.io/collector/support-packages/x86_64/2.7.0/support
 
 tar xvf openshift-install-linux.tar.gz openshift-install
 tar xvf openshift-client-linux.tar.gz oc kubectl
+tar xvf oc-mirror.tar.gz oc-mirror
+chmod u+x openshift-install
+sudo mv openshift-install /usr/local/bin
+chmod u+x oc
+sudo mv oc /usr/local/bin
+chmod u+x kubectl
+sudo mv kubectl /usr/local/bin
+chmod u+x oc-mirror
+sudo mv oc-mirror /usr/local/bin
 rm -i -f openshift-install-linux.tar.gz
 rm -i -f openshift-client-linux.tar.gz
+rm -i -f oc-mirror.tar.gz
 
 oc-mirror --config=../imageset-config.yaml file://
