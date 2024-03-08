@@ -43,4 +43,4 @@ rm -i -f openshift-install-linux.tar.gz
 rm -i -f openshift-client-linux.tar.gz
 rm -i -f oc-mirror.tar.gz
 
-oc-mirror --config=../imageset-config.yaml file://
+oc-mirror --config=./imageset-config.yaml file://
