@@ -6,80 +6,82 @@ storageConfig:
     path: ./imageset-back-end
 mirror:
   platform:
+    architectures:
+    - amd64
     channels:
     - name: stable-4.15
     graph: true
-#  operators:
-#  - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.15
-#    packages:
-#     - name: advanced-cluster-management
-#       channels:
-#       - name: release-2.9
-#    - name: cincinnati-operator
-#      channels:
-#      - name: v1 
-#    - name: cluster-logging                                    
-#      channels:
-#      - name: stable-5.8 
-#    - name: compliance-operator                                    
-#      channels:
-#      - name: stable 
-#    - name: devspaces
-#      channels:
-#      - name: stable 
-#    - name: devworkspace-operator
-#      channels:
-#      - name: fast
-#    - name: file-integrity-operator                                   
-#      channels:
-#      - name: stable 
-#    - name: jaeger-product 
-#      channels:
-#      - name: stable 
-#    - name: kiali-ossm 
-#      channels:
-#      - name: stable 
-#     - name: local-storage-operator
-#       channels:
-#       - name: stable
-#    - name: loki-operator 
-#      channels:
-#      - name: stable-5.8 
-#    - name: mcg-operator 
-#      channels:
-#      - name: stable-4.15
-#    - name: ocs-client-operator
-#      channels: 
-#      - name: stable-4.14
-#    - name: ocs-operator
-#      channels:
-#      - name: stable-4.14
-#    - name: odf-csi-addons-operator 
-#      channels:
-#      - name: stable-4.14
-#    - name: odf-operator 
-#      channels:
-#      - name: stable-4.14
-#    - name: openshift-gitops-operator 
-#      channels:
-#      - name: latest
-#    - name: openshift-pipelines-operator-rh 
-#      channels:
-#      - name: latest
-#    - name: rhacs-operator 
-#      channels:
-#      - name: stable 
-#    - name: serverless-operator                                     
-#      channels:
-#      - name: stable 
-#    - name: servicemeshoperator
-#      channels:
-#      - name: stable 
+  operators:
+  - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.15
+    packages:
+    - name: advanced-cluster-management
+      channels:
+      - name: release-2.9
+    - name: cincinnati-operator
+      channels:
+      - name: v1 
+    - name: cluster-logging                                    
+      channels:
+      - name: stable-5.8 
+    - name: compliance-operator                                    
+      channels:
+      - name: stable 
+    - name: devspaces
+      channels:
+      - name: stable 
+    - name: devworkspace-operator
+      channels:
+      - name: fast
+    - name: file-integrity-operator                                   
+      channels:
+      - name: stable 
+    - name: jaeger-product 
+      channels:
+      - name: stable 
+    - name: kiali-ossm 
+      channels:
+      - name: stable 
+    - name: local-storage-operator
+      channels:
+      - name: stable
+    - name: loki-operator 
+      channels:
+      - name: stable-5.8 
+    - name: mcg-operator 
+      channels:
+      - name: stable-4.15
+    - name: ocs-client-operator
+      channels: 
+      - name: stable-4.14
+    - name: ocs-operator
+      channels:
+      - name: stable-4.14
+    - name: odf-csi-addons-operator 
+      channels:
+      - name: stable-4.14
+    - name: odf-operator 
+      channels:
+      - name: stable-4.14
+    - name: openshift-gitops-operator 
+      channels:
+      - name: latest
+    - name: openshift-pipelines-operator-rh 
+      channels:
+      - name: latest
+    - name: rhacs-operator 
+      channels:
+      - name: stable 
+    - name: serverless-operator                                     
+      channels:
+      - name: stable 
+    - name: servicemeshoperator
+      channels:
+      - name: stable 
 
 
 
-#  additionalImages:
-#  - name: registry.redhat.io/ubi8/ubi:latest
-#  - name: registry.redhat.io/ubi8/nodejs-18:latest
-#  - name: registry.redhat.io/ubi8/nodejs-18-minimal:latest
+  additionalImages:
+  - name: registry.redhat.io/ubi8/ubi:latest
+  - name: registry.redhat.io/ubi8/nodejs-18:latest
+  - name: registry.redhat.io/ubi8/nodejs-18-minimal:latest
   helm: {}
